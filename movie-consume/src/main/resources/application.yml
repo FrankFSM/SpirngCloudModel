@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: movie-consume
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://ralap:hjx969190@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+server:
+  port: 8001
