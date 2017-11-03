@@ -1,6 +1,6 @@
 spring:
   application:
-    name: movie-consume
+    name: movie-consume-feign-hystrix
 eureka:
   client:
     serviceUrl:
@@ -8,6 +8,8 @@ eureka:
   instance:
     prefer-ip-address: true
 server:
-  port: 8001
-#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
+  port: 8002
 management.security.enabled: false
+feign:
+  hystrix:
+    enabled: true

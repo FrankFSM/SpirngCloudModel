@@ -29,3 +29,4 @@ eureka:
     prefer-ip-address: true
 server:
   port: 8082
+management.security.enabled: false
