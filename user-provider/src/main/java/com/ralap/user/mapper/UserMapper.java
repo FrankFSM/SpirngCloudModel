@@ -1,6 +1,7 @@
 package com.ralap.user.mapper;
 
 import com.ralap.user.domain.User;
+import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
@@ -12,4 +13,7 @@ public interface UserMapper {
 
     @Select("select * from user where id = #{id}")
     public User getUserById(long id);
+
+    @Select("select * from user")
+    List<User> getAllUser();
 }

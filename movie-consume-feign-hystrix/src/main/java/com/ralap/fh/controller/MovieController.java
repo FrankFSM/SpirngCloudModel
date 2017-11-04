@@ -1,7 +1,8 @@
 package com.ralap.fh.controller;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.ralap.fh.client.PaymentClient;
 import com.ralap.fh.client.UserClient;
+import com.ralap.fh.domain.Payment;
 import com.ralap.fh.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,11 +17,18 @@ public class MovieController {
 
     @Autowired
     private UserClient userClient;
+    @Autowired
+    private PaymentClient paymentClient;
 
     @GetMapping("/movie/{id}")
 //    @HystrixCommand(fallbackMethod = "getDefaultMovide")
     public User getMovide(@PathVariable long id) {
-         return userClient.getUser(id);
+        return userClient.getUser(id);
+    }
+
+    @GetMapping("/getPayment/{id}")
+    public Payment allMovie(@PathVariable long id) {
+        return paymentClient.getPayment(id);
     }
 
 //    public User getDefaultMovide(long id) {

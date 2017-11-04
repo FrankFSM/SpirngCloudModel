@@ -2,6 +2,7 @@ package com.ralap.user.service;
 
 import com.ralap.user.domain.User;
 import com.ralap.user.mapper.UserMapper;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,5 +17,9 @@ public class UserService {
 
     public User getUserById(long id) {
         return userMapper.getUserById(id);
+    }
+
+    public List<User> getAllUser() {
+        return userMapper.getAllUser();
     }
 }

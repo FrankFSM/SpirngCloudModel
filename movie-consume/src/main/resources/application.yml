@@ -8,6 +8,6 @@ eureka:
   instance:
     prefer-ip-address: true
 server:
-  port: 8001
+  port: 8011
 #hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
 management.security.enabled: false
