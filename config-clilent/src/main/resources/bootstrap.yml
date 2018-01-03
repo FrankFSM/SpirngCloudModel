@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: application
+  cloud:
+    config:
+      uri: http://localhost:7001/
+      profile: pro
+      label: slaver
+      username: ralap
+      password: hjx969190

@@ -1,0 +1,17 @@
+server:
+  port: 7001
+spring:
+  application:
+    name: application
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/itFanRalap/config-server.git
+          search-paths: config
+security:
+  basic:
+    enabled: true
+  user:
+    name: ralap
+    password: hjx969190
